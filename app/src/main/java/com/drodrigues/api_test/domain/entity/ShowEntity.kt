@@ -1,8 +1,5 @@
 package com.drodrigues.api_test.domain.entity
 
-import com.drodrigues.api_test.data.model.ImageModel
-import com.google.gson.annotations.SerializedName
-
 internal data class ShowEntity(
 
     val id: Int = 0,
