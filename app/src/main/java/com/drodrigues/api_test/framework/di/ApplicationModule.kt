@@ -3,6 +3,7 @@ package com.drodrigues.api_test.framework.di
 import com.drodrigues.api_test.data.repository.ShowRepositoryImpl
 import com.drodrigues.api_test.data.source.ShowDataSource
 import com.drodrigues.api_test.domain.repository.ShowRepository
+import com.drodrigues.api_test.domain.usecase.*
 import com.drodrigues.api_test.domain.usecase.GetShowByIdUseCase
 import com.drodrigues.api_test.domain.usecase.GetShowByIdUseCaseImpl
 import com.drodrigues.api_test.domain.usecase.GetShowCompleteListUseCase
@@ -44,10 +45,17 @@ internal val applicationModule: Module = module {
         )
     }
 
+    factory<GetSeasonListByShowIdUseCase> {
+        GetSeasonListByShowIdUseCaseImpl(
+            showRepository = get()
+        )
+    }
+
     viewModel {
         MainViewModel(
             getShowCompleteListUseCase = get(),
             getShowByIdUseCase = get(),
+            getSeasonListByShowIdUseCase = get()
         )
     }
 

@@ -1,5 +1,6 @@
 package com.drodrigues.api_test.framework.data.source
 
+import com.drodrigues.api_test.data.model.SeasonModel
 import com.drodrigues.api_test.data.model.ShowModel
 import com.drodrigues.api_test.data.service.RetrofitService
 import com.drodrigues.api_test.data.source.ShowDataSource
@@ -22,5 +23,9 @@ internal class ShowDataSourceImpl(
 
     override suspend fun getShowById(id: String): Response<ShowModel> {
         return service.getShowById(id)
+    }
+
+    override suspend fun getSeasonListByShowId(showId: String): Response<List<SeasonModel>> {
+        return service.getSeasonsByShowId(showId)
     }
 }
