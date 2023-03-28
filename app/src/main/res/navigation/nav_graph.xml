@@ -3,25 +3,34 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/firstFragment">
+    app:startDestination="@id/showCompleteListFragment">
 
     <fragment
-        android:id="@+id/firstFragment"
-        android:name="com.drodrigues.api_test.presentation.view.fragment.FirstFragment"
-        android:label="fragment_first"
-        tools:layout="@layout/fragment_first" >
+        android:id="@+id/splashFragment"
+        android:name="com.drodrigues.api_test.presentation.view.fragment.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
         <action
-            android:id="@+id/action_firstFragment_to_secondFragment"
-            app:destination="@id/secondFragment" />
+            android:id="@+id/action_splashFragment_to_firstFragment"
+            app:destination="@id/showCompleteListFragment" />
     </fragment>
     <fragment
-        android:id="@+id/secondFragment"
-        android:name="com.drodrigues.api_test.presentation.view.fragment.SecondFragment"
-        android:label="fragment_second"
-        tools:layout="@layout/fragment_second" >
+        android:id="@+id/showCompleteListFragment"
+        android:name="com.drodrigues.api_test.presentation.view.fragment.ShowCompleteListFragment"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_show_complete_list" >
         <action
-            android:id="@+id/action_secondFragment_to_firstFragment"
-            app:destination="@id/firstFragment" />
+            android:id="@+id/action_showCompleteListFragment_to_ShowDetailsFragment"
+            app:destination="@id/showDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/showDetailsFragment"
+        android:name="com.drodrigues.api_test.presentation.view.fragment.ShowDetailsFragment"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_show_details" >
+        <action
+            android:id="@+id/action_ShowDetailsFragment_to_ShowCompleteListFragment"
+            app:destination="@id/showCompleteListFragment" />
         <argument
             android:name="showId"
             app:argType="string" />

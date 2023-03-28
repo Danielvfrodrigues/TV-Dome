@@ -1,34 +1,34 @@
 package com.drodrigues.api_test.presentation.view.fragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.GridLayoutManager
-import com.drodrigues.api_test.databinding.FragmentFirstBinding
+import com.drodrigues.api_test.databinding.FragmentShowCompleteListBinding
 import com.drodrigues.api_test.domain.entity.ShowEntity
 import com.drodrigues.api_test.presentation.view.adapter.CardViewAdapter
 import com.drodrigues.api_test.presentation.view.listener.ShowCardClickListener
 import com.drodrigues.api_test.presentation.viewmodel.MainViewModel
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-internal class FirstFragment : Fragment(), ShowCardClickListener {
+internal class ShowCompleteListFragment : Fragment(), ShowCardClickListener {
 
-    private lateinit var binding: FragmentFirstBinding
+    private lateinit var binding: FragmentShowCompleteListBinding
     private val mainViewModel: MainViewModel by viewModel()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         val firstFragment = this
-
-        binding = FragmentFirstBinding.inflate(layoutInflater)
+        binding = FragmentShowCompleteListBinding.inflate(layoutInflater)
 
         mainViewModel.getShowCompleteListLiveData.observe(viewLifecycleOwner) { showList ->
             binding.recyclerView.apply {
@@ -37,7 +37,7 @@ internal class FirstFragment : Fragment(), ShowCardClickListener {
             }
         }
 
-        lifecycleScope.launch {
+        lifecycleScope.launch(Dispatchers.Main) {
             mainViewModel.getShowCompleteList()
         }
 
@@ -45,7 +45,8 @@ internal class FirstFragment : Fragment(), ShowCardClickListener {
     }
 
     override fun onClick(showEntity: ShowEntity) {
-        val action = FirstFragmentDirections.actionFirstFragmentToSecondFragment("1")
+        val action =
+            ShowCompleteListFragmentDirections.actionShowCompleteListFragmentToShowDetailsFragment(showEntity.id.toString())
         Navigation.findNavController(binding.root).navigate(action)
     }
 
