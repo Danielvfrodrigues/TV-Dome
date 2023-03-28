@@ -1,6 +1,5 @@
 package com.drodrigues.api_test.framework.di
 
-import com.drodrigues.api_test.BaseApplication
 import com.drodrigues.api_test.data.repository.ShowRepositoryImpl
 import com.drodrigues.api_test.data.source.ShowDataSource
 import com.drodrigues.api_test.domain.repository.ShowRepository
@@ -16,10 +15,6 @@ import org.koin.core.module.Module
 import org.koin.dsl.module
 
 internal val applicationModule: Module = module {
-
-    single {
-        BaseApplication().getLifecycleOwner()
-    }
 
     factory {
         AppConnector().getRetrofit()
@@ -52,7 +47,7 @@ internal val applicationModule: Module = module {
     viewModel {
         MainViewModel(
             getShowCompleteListUseCase = get(),
-            getShowByIdUseCase = get()
+            getShowByIdUseCase = get(),
         )
     }
 

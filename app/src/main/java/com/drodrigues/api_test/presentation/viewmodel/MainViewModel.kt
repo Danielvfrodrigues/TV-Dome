@@ -7,12 +7,11 @@ import androidx.lifecycle.viewModelScope
 import com.drodrigues.api_test.domain.entity.ShowEntity
 import com.drodrigues.api_test.domain.usecase.GetShowByIdUseCase
 import com.drodrigues.api_test.domain.usecase.GetShowCompleteListUseCase
-import com.drodrigues.api_test.domain.util.Result
 import kotlinx.coroutines.launch
 
 internal class MainViewModel(
     private val getShowCompleteListUseCase: GetShowCompleteListUseCase,
-    private val getShowByIdUseCase: GetShowByIdUseCase
+    private val getShowByIdUseCase: GetShowByIdUseCase,
 ) : ViewModel() {
 
     private val _getShowCompleteListLiveData: MutableLiveData<List<ShowEntity>> = MutableLiveData()
@@ -33,11 +32,11 @@ internal class MainViewModel(
         }
     }
 
-    suspend fun getEpisodeCompleteList() {
+    suspend fun getSeasonListByShowId() {
         TODO()
     }
 
-    suspend fun getEpisodeListByShowId() {
+    suspend fun getEpisodeListBySeasonId() {
         TODO()
     }
 

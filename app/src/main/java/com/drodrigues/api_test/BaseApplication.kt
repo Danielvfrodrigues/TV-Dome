@@ -1,7 +1,6 @@
 package com.drodrigues.api_test
 
 import android.app.Application
-import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.ProcessLifecycleOwner
 import com.drodrigues.api_test.framework.di.applicationModule
