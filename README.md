@@ -6,7 +6,7 @@
 
 ## 📐 Clean Architecture
 
-<img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.objective.com.br%2Finsights%2Fclean-architecture-com-mvvm%2F&psig=AOvVaw3BCDPZp4XOUfYx4gkMI923&ust=1680185232614000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOCXn_Gngf4CFQAAAAAdAAAAABAR" alt="Clean Architechture">
+<img src="https://www.objective.com.br/wp-content/uploads/2020/01/Camada-de-Dados-Data-Layer.png">
 
 This project was developed base on the Clean Architecture.
 Coding the app on Clean provides a plenty of benefits, such as: 
