@@ -58,28 +58,29 @@ SOLID is an acronym for the first five object-oriented design (OOD) principles.
 ## 📎 Project Dependencies
 
 
-#### Squareup RETROFIT: <ins>Network Requests</ins>;
+#### <ins>Squareup RETROFIT:</ins> <ins>Network Requests</ins>;
 * Https requests made easy;
 
-#### Google GSON
+#### <ins>Google GSON: #####Json Converter;
+* Easy serialize and desserialize Json Objects.
 
-#### KOIN: <ins>Dependency Injection</ins>;
+#### <ins>KOIN:</ins> #####Dependency Injection;
 * Implementing dependency injection provides access of anythin anywhere in the code at your desire.
 
-#### Androidx NAVGRAPH: <ins>UI Navigation</ins>;
+#### <ins>Androidx NAVGRAPH:</ins> #####UI Navigation
 * Modern navigation ways for activities and fragments; ~~cuz' everyone is sick of Intents and Bundles!
 
-#### Square PICASSO: <ins>Image Downloader</ins>;
+#### <ins>Square PICASSO:</ins> #####Image Downloader
 * Donwload apply images from the web in your app in just one code line;
 
-#### Kotlin Coroutines: <ins>Kotlin Coroutines</ins>;
+#### <ins>Kotlin Coroutines:</ins> #####Kotlin Coroutines</ins>;
 * Asynchronous streams and Threadmanagement.<br>
 
-#### UI Dependencies:
-<ins>Androidx Cardview</ins>
-<ins>Androidx Splashscreen</ins>
-<ins>Google Material</ins>
-<ins>and more...</ins>
+<ins>UI Dependencies:
+####Androidx Cardview
+####Androidx Splashscreen
+####Google Material
+####and more...
 
 
 ## 🌎 Application Map
