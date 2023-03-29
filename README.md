@@ -1,4 +1,4 @@
-<img src="https://github.com/Danielvfrodrigues/TV-Dome/blob/main/app/src/main/res/drawable/tv_dome_logo.png" alt="TV Dome Logo">
+<img src="https://github.com/Danielvfrodrigues/TV-Dome/blob/main/app/src/main/res/drawable/TV_DOME-removebg-preview.png" alt="TV Dome Logo">
 
 > ### Making idle times productive.
 <br>
@@ -55,10 +55,7 @@ SOLID is an acronym for the first five object-oriented design (OOD) principles.
 ## 📎 Libraries and Dependencies
 
 
-#### Database: <ins>Android Room</ins>;
-* Used to store important data in cache, so the app may be still functional when the Network is not available.
-
-#### NetWork: <ins>Retrofit</ins>;
+#### Network: <ins>Retrofit</ins>;
 * Used to manage the network connection to the API.
 
 #### Dependency Injection: <ins>Koin</ins>;
@@ -69,7 +66,7 @@ Implementing dependency injection provides you with the following advantages:
 3. Ease of testing."
 
 
-#### Async and Reactive Programming: <ins>RX Java</ins>.
+#### Async and Reactive Programming: <ins>Kotlin Coroutines</ins>.
 * "composing asynchronous streams of real-time data and event-based programs by using observable sequences in a Reactive Programming style. <br>
 Benefits of using RxJava:
 1. Having responsive applications;
@@ -92,9 +89,10 @@ Benefits of using RxJava:
 ## 🔨 Potential Improvements
 
 
-1. Login Screen;
-2. Firebase Authentication with social media profiles;
-3. User validation;
+1. Block Screen by PIN Code;
+2. Database Integrations;
+3. Improve User's Experience by adding cool features like Favorite Chart, for instance;
+
 <br>
 
 ## 💾 Download the App
