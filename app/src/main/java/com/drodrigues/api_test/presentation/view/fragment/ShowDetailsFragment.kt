@@ -36,6 +36,8 @@ internal class ShowDetailsFragment : Fragment() {
 
         mainViewModel.getShowByIdLiveData.observe(viewLifecycleOwner) { show ->
             Picasso.get().load(show.imageEntity.medium).into(binding.showCover)
+            binding.showScheduleDays.text = show.scheduleEntity.days.toString()
+            binding.showScheduleTime.text = show.scheduleEntity.time
             binding.showName.text = show.name
             binding.showGenres.text = show.genres.toString()
             binding.showSummary.text = HtmlCompat.fromHtml(show.summary, HtmlCompat.FROM_HTML_MODE_LEGACY)

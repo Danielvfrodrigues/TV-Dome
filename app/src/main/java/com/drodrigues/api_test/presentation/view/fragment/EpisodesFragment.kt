@@ -1,4 +1,4 @@
-package com.drodrigues.api_test
+package com.drodrigues.api_test.presentation.view.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
