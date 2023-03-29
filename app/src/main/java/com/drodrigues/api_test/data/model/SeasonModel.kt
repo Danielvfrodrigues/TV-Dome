@@ -8,13 +8,16 @@ internal data class SeasonModel(
     @SerializedName("id")
     val id: String,
     @SerializedName("number")
-    val number: String
+    val number: String,
+    @SerializedName("episodeOrder")
+    val episodeOrder: String
 )
 
 internal fun toEntity(model: SeasonModel): SeasonEntity {
     return SeasonEntity(
         id = model.id,
-        number = model.number
+        number = model.number,
+        episodeOrder = model.episodeOrder
     )
 }
 

@@ -4,20 +4,18 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.core.text.HtmlCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.navArgs
 import com.drodrigues.api_test.databinding.FragmentShowDetailsBinding
-import com.drodrigues.api_test.domain.entity.SeasonEntity
-import com.drodrigues.api_test.presentation.view.listener.SeasonCardClickListener
 import com.drodrigues.api_test.presentation.viewmodel.MainViewModel
 import com.squareup.picasso.Picasso
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-internal class ShowDetailsFragment : Fragment(), SeasonCardClickListener {
+internal class ShowDetailsFragment : Fragment() {
 
     private lateinit var binding: FragmentShowDetailsBinding
     private val mainViewModel: MainViewModel by viewModel()
@@ -29,6 +27,12 @@ internal class ShowDetailsFragment : Fragment(), SeasonCardClickListener {
     ): View {
 
         binding = FragmentShowDetailsBinding.inflate(layoutInflater)
+
+        binding.moreFab.setOnClickListener {
+            val action =
+                ShowDetailsFragmentDirections.actionShowDetailsFragmentToSeasonsFragment(args.showId)
+            Navigation.findNavController(binding.root).navigate(action)
+        }
 
         mainViewModel.getShowByIdLiveData.observe(viewLifecycleOwner) { show ->
             Picasso.get().load(show.imageEntity.medium).into(binding.showCover)
@@ -43,9 +47,5 @@ internal class ShowDetailsFragment : Fragment(), SeasonCardClickListener {
         }
 
         return binding.root
-    }
-
-    override fun onClick(seasonEntity: SeasonEntity) {
-        Toast.makeText(context,"====== CLICK =====", Toast.LENGTH_LONG).show()
     }
 }

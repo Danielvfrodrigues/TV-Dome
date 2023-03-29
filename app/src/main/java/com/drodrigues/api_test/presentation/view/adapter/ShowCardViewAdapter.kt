@@ -3,26 +3,26 @@ package com.drodrigues.api_test.presentation.view.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.drodrigues.api_test.databinding.CardCellBinding
+import com.drodrigues.api_test.databinding.CardShowBinding
 import com.drodrigues.api_test.domain.entity.ShowEntity
 import com.drodrigues.api_test.presentation.view.listener.ShowCardClickListener
-import com.drodrigues.api_test.presentation.view.viewholder.CardViewHolder
+import com.drodrigues.api_test.presentation.view.viewholder.ShowCardViewHolder
 
-internal class CardViewAdapter(
+internal class ShowCardViewAdapter(
 
     private val shows: List<ShowEntity>,
     private val clickListener: ShowCardClickListener
 
-) : RecyclerView.Adapter<CardViewHolder>() {
+) : RecyclerView.Adapter<ShowCardViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ShowCardViewHolder {
         val from = LayoutInflater.from(parent.context)
-        val binding = CardCellBinding.inflate(from, parent, false)
+        val binding = CardShowBinding.inflate(from, parent, false)
 
-        return CardViewHolder(binding, clickListener)
+        return ShowCardViewHolder(binding, clickListener)
     }
 
-    override fun onBindViewHolder(holder: CardViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ShowCardViewHolder, position: Int) {
         holder.bindShow(shows[position])
     }
 

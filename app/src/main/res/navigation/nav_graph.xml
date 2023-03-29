@@ -31,8 +31,35 @@
         <action
             android:id="@+id/action_ShowDetailsFragment_to_ShowCompleteListFragment"
             app:destination="@id/showCompleteListFragment" />
+        <action
+            android:id="@+id/action_showDetailsFragment_to_seasonsFragment"
+            app:destination="@id/seasonsFragment" />
         <argument
             android:name="showId"
             app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/seasonsFragment"
+        android:name="com.drodrigues.api_test.presentation.view.fragment.SeasonsFragment"
+        android:label="fragment_seasons"
+        tools:layout="@layout/fragment_seasons" >
+        <action
+            android:id="@+id/action_seasonsFragment_to_showDetailsFragment"
+            app:destination="@id/showDetailsFragment" />
+        <argument
+            android:name="showId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_seasonsFragment_to_episodesFragment"
+            app:destination="@id/episodesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/episodesFragment"
+        android:name="com.drodrigues.api_test.EpisodesFragment"
+        android:label="fragment_episodes"
+        tools:layout="@layout/fragment_episodes" >
+        <action
+            android:id="@+id/action_episodesFragment_to_seasonsFragment"
+            app:destination="@id/seasonsFragment" />
     </fragment>
 </navigation>

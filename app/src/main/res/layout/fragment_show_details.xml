@@ -82,6 +82,7 @@
         </androidx.core.widget.NestedScrollView>
 
         <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/more_fab"
             android:layout_width="150dp"
             android:layout_height="65dp"
             android:layout_margin="16dp"

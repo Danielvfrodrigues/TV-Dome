@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/season_card_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:background="@drawable/card_view_custom_shape">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/episode_order_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="32dp"
+                    android:elevation="15sp"
+                    android:textColor="@color/cardview_light_background"
+                    android:textSize="15sp"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintBottom_toTopOf="@+id/seaso_label_text_view"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/episode_order_label_text_view"
+                    tools:text="23" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/episode_order_label_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_gravity="bottom"
+                    android:elevation="15sp"
+                    android:textColor="@color/cardview_light_background"
+                    android:textSize="15sp"
+                    android:textStyle="bold|italic"
+                    android:text="@string/episodes"
+                    app:layout_constraintBottom_toTopOf="@+id/seaso_label_text_view"
+                    app:layout_constraintStart_toEndOf="@+id/episode_order_text_view" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/seaso_label_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/season"
+                    android:textColor="@color/alternative_white"
+                    android:textSize="24sp"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintBottom_toBottomOf="@+id/chevron_arrow_image_view"
+                    app:layout_constraintStart_toStartOf="@+id/episode_order_text_view" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/season_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:textColor="@color/alternative_white"
+                    android:textSize="24sp"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintBottom_toBottomOf="@+id/seaso_label_text_view"
+                    app:layout_constraintStart_toEndOf="@+id/seaso_label_text_view"
+                    app:layout_constraintTop_toTopOf="@+id/seaso_label_text_view"
+                    tools:text="1" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/chevron_arrow_image_view"
+                    android:layout_width="64dp"
+                    android:layout_height="63dp"
+                    android:layout_margin="16dp"
+                    android:src="@drawable/right_chevron_arrow"
+                    android:tint="@color/alternative_white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>
