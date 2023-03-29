@@ -108,7 +108,7 @@ Download the project and run on Android Studio.
 
 ### Via APK File:
 ```
-https://github.com/Danielvfrodrigues/appbreaktheice_kotlin/blob/main/breaktheiceapp-1.0.0-1-debug.apk
+https://github.com/Danielvfrodrigues/TV-Dome/blob/main/dome_tv-1.0.0-debug.apk
 ```
 Download the APK file and install it directly in your device.
 <br>
