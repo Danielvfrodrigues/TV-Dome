@@ -1,4 +1,4 @@
-<img src="https://github.com/Danielvfrodrigues/appbreaktheice/blob/master/app/src/main/res/drawable/bti_logo_black_png.png" alt="Break The Ice Logo">
+<img src="https://github.com/Danielvfrodrigues/TV-Dome/blob/main/app/src/main/res/drawable/tv_dome_logo.png" alt="TV Dome Logo">
 
 > ### Making idle times productive.
 <br>
