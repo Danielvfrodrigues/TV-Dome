@@ -1,12 +1,12 @@
-package com.drodrigues.api_test.presentation.view.adapter
+package com.drodrigues.tvdome.presentation.view.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.drodrigues.api_test.databinding.CardSeasonBinding
-import com.drodrigues.api_test.domain.entity.SeasonEntity
-import com.drodrigues.api_test.presentation.view.listener.SeasonCardClickListener
-import com.drodrigues.api_test.presentation.view.viewholder.SeasonCardViewHolder
+import com.drodrigues.tvdome.databinding.CardSeasonBinding
+import com.drodrigues.tvdome.domain.entity.SeasonEntity
+import com.drodrigues.tvdome.presentation.view.listener.SeasonCardClickListener
+import com.drodrigues.tvdome.presentation.view.viewholder.SeasonCardViewHolder
 
 internal class SeasonCardViewAdapter(
 

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.drodrigues.api_test.presentation.view.fragment.SplashFragment"
+        android:name="com.drodrigues.tvdome.presentation.view.fragment.SplashFragment"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/showCompleteListFragment"
-        android:name="com.drodrigues.api_test.presentation.view.fragment.ShowCompleteListFragment"
+        android:name="com.drodrigues.tvdome.presentation.view.fragment.ShowCompleteListFragment"
         android:label="fragment_first"
         tools:layout="@layout/fragment_show_complete_list" >
         <action
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/showDetailsFragment"
-        android:name="com.drodrigues.api_test.presentation.view.fragment.ShowDetailsFragment"
+        android:name="com.drodrigues.tvdome.presentation.view.fragment.ShowDetailsFragment"
         android:label="fragment_second"
         tools:layout="@layout/fragment_show_details" >
         <action
@@ -40,7 +40,7 @@
     </fragment>
     <fragment
         android:id="@+id/seasonsFragment"
-        android:name="com.drodrigues.api_test.presentation.view.fragment.SeasonsFragment"
+        android:name="com.drodrigues.tvdome.presentation.view.fragment.SeasonsFragment"
         android:label="fragment_seasons"
         tools:layout="@layout/fragment_seasons" >
         <action
@@ -55,7 +55,7 @@
     </fragment>
     <fragment
         android:id="@+id/episodesFragment"
-        android:name="com.drodrigues.api_test.presentation.view.fragment.EpisodesFragment"
+        android:name="com.drodrigues.tvdome.presentation.view.fragment.EpisodesFragment"
         android:label="fragment_episodes"
         tools:layout="@layout/fragment_episodes" >
         <action
@@ -70,7 +70,7 @@
     </fragment>
     <fragment
         android:id="@+id/episodeDetailsFragment"
-        android:name="com.drodrigues.api_test.presentation.view.fragment.EpisodeDetailsFragment"
+        android:name="com.drodrigues.tvdome.presentation.view.fragment.EpisodeDetailsFragment"
         android:label="EpisodeDetailsFragment" >
         <action
             android:id="@+id/action_episodeDetailsFragment_to_episodesFragment"

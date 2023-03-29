@@ -1,11 +1,11 @@
-package com.drodrigues.api_test.framework.data.source
+package com.drodrigues.tvdome.framework.data.source
 
-import com.drodrigues.api_test.data.model.EpisodeModel
-import com.drodrigues.api_test.data.model.SearchResponseModel
-import com.drodrigues.api_test.data.model.SeasonModel
-import com.drodrigues.api_test.data.model.ShowModel
-import com.drodrigues.api_test.data.service.RetrofitService
-import com.drodrigues.api_test.data.source.MainDataSource
+import com.drodrigues.tvdome.data.model.EpisodeModel
+import com.drodrigues.tvdome.data.model.SearchResponseModel
+import com.drodrigues.tvdome.data.model.SeasonModel
+import com.drodrigues.tvdome.data.model.ShowModel
+import com.drodrigues.tvdome.data.service.RetrofitService
+import com.drodrigues.tvdome.data.source.MainDataSource
 import retrofit2.Response
 import retrofit2.Retrofit
 

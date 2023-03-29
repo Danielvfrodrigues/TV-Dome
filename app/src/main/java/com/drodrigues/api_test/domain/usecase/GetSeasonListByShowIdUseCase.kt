@@ -1,7 +1,7 @@
-package com.drodrigues.api_test.domain.usecase
+package com.drodrigues.tvdome.domain.usecase
 
-import com.drodrigues.api_test.domain.entity.SeasonEntity
-import com.drodrigues.api_test.domain.repository.MainRepository
+import com.drodrigues.tvdome.domain.entity.SeasonEntity
+import com.drodrigues.tvdome.domain.repository.MainRepository
 
 internal interface GetSeasonListByShowIdUseCase {
     suspend fun execute(showId: String): List<SeasonEntity>

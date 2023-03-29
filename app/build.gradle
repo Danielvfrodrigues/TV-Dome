@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace 'com.drodrigues.api_test'
+    namespace 'com.drodrigues.tvdome'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.drodrigues.api_test"
+        applicationId "com.drodrigues.tvdome"
         minSdk 26
         targetSdk 33
         versionCode 1

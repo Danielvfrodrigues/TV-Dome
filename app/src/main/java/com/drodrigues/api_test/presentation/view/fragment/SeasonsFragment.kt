@@ -1,4 +1,4 @@
-package com.drodrigues.api_test.presentation.view.fragment
+package com.drodrigues.tvdome.presentation.view.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,11 +9,11 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.GridLayoutManager
-import com.drodrigues.api_test.databinding.FragmentSeasonsBinding
-import com.drodrigues.api_test.domain.entity.SeasonEntity
-import com.drodrigues.api_test.presentation.view.adapter.SeasonCardViewAdapter
-import com.drodrigues.api_test.presentation.view.listener.SeasonCardClickListener
-import com.drodrigues.api_test.presentation.viewmodel.MainViewModel
+import com.drodrigues.tvdome.databinding.FragmentSeasonsBinding
+import com.drodrigues.tvdome.domain.entity.SeasonEntity
+import com.drodrigues.tvdome.presentation.view.adapter.SeasonCardViewAdapter
+import com.drodrigues.tvdome.presentation.view.listener.SeasonCardClickListener
+import com.drodrigues.tvdome.presentation.viewmodel.MainViewModel
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 

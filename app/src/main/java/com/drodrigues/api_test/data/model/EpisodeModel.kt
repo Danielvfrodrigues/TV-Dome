@@ -1,7 +1,7 @@
-package com.drodrigues.api_test.data.model
+package com.drodrigues.tvdome.data.model
 
-import com.drodrigues.api_test.domain.entity.EpisodeEntity
-import com.drodrigues.api_test.domain.entity.ImageEntity
+import com.drodrigues.tvdome.domain.entity.EpisodeEntity
+import com.drodrigues.tvdome.domain.entity.ImageEntity
 import com.google.gson.annotations.SerializedName
 
 internal data class EpisodeModel(

@@ -1,4 +1,4 @@
-package com.drodrigues.api_test.data.util
+package com.drodrigues.tvdome.data.util
 
 internal const val API_BASE_URL: String = "https://api.tvmaze.com/"
 internal const val API_ENDPOINT_SEARCH_SHOW: String = "search/shows?q=:query"

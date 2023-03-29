@@ -1,9 +1,9 @@
-package com.drodrigues.api_test.domain.repository
+package com.drodrigues.tvdome.domain.repository
 
-import com.drodrigues.api_test.domain.entity.EpisodeEntity
-import com.drodrigues.api_test.domain.entity.SearchResponseEntity
-import com.drodrigues.api_test.domain.entity.SeasonEntity
-import com.drodrigues.api_test.domain.entity.ShowEntity
+import com.drodrigues.tvdome.domain.entity.EpisodeEntity
+import com.drodrigues.tvdome.domain.entity.SearchResponseEntity
+import com.drodrigues.tvdome.domain.entity.SeasonEntity
+import com.drodrigues.tvdome.domain.entity.ShowEntity
 
 internal interface MainRepository {
 

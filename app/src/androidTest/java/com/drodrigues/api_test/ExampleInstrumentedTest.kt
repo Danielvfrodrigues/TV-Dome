@@ -1,4 +1,4 @@
-package com.drodrigues.api_test
+package com.drodrigues.tvdome
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

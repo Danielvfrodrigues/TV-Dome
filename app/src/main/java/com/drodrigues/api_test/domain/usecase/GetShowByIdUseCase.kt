@@ -1,7 +1,7 @@
-package com.drodrigues.api_test.domain.usecase
+package com.drodrigues.tvdome.domain.usecase
 
-import com.drodrigues.api_test.domain.entity.ShowEntity
-import com.drodrigues.api_test.domain.repository.MainRepository
+import com.drodrigues.tvdome.domain.entity.ShowEntity
+import com.drodrigues.tvdome.domain.repository.MainRepository
 
 internal interface GetShowByIdUseCase {
     suspend fun execute(id: String): ShowEntity?

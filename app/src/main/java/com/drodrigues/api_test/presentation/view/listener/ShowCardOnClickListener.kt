@@ -1,6 +1,6 @@
-package com.drodrigues.api_test.presentation.view.listener
+package com.drodrigues.tvdome.presentation.view.listener
 
-import com.drodrigues.api_test.domain.entity.ShowEntity
+import com.drodrigues.tvdome.domain.entity.ShowEntity
 
 internal interface ShowCardOnClickListener {
     fun onClick(showEntity: ShowEntity)

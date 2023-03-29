@@ -1,4 +1,4 @@
-package com.drodrigues.api_test
+package com.drodrigues.tvdome
 
 import org.junit.Test
 

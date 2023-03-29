@@ -1,14 +1,14 @@
-package com.drodrigues.api_test.data.service
+package com.drodrigues.tvdome.data.service
 
-import com.drodrigues.api_test.data.model.EpisodeModel
-import com.drodrigues.api_test.data.model.SearchResponseModel
-import com.drodrigues.api_test.data.model.SeasonModel
-import com.drodrigues.api_test.data.model.ShowModel
-import com.drodrigues.api_test.data.util.*
-import com.drodrigues.api_test.data.util.API_ENDPOINT_GET_SEASONS_BY_SHOW_ID
-import com.drodrigues.api_test.data.util.API_ENDPOINT_GET_SHOW_BY_ID
-import com.drodrigues.api_test.data.util.API_ENDPOINT_GET_SHOW_COMPLETE_LIST
-import com.drodrigues.api_test.data.util.API_ENDPOINT_SEARCH_SHOW
+import com.drodrigues.tvdome.data.model.EpisodeModel
+import com.drodrigues.tvdome.data.model.SearchResponseModel
+import com.drodrigues.tvdome.data.model.SeasonModel
+import com.drodrigues.tvdome.data.model.ShowModel
+import com.drodrigues.tvdome.data.util.*
+import com.drodrigues.tvdome.data.util.API_ENDPOINT_GET_SEASONS_BY_SHOW_ID
+import com.drodrigues.tvdome.data.util.API_ENDPOINT_GET_SHOW_BY_ID
+import com.drodrigues.tvdome.data.util.API_ENDPOINT_GET_SHOW_COMPLETE_LIST
+import com.drodrigues.tvdome.data.util.API_ENDPOINT_SEARCH_SHOW
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path

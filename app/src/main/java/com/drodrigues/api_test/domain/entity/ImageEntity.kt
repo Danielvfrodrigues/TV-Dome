@@ -1,4 +1,4 @@
-package com.drodrigues.api_test.domain.entity
+package com.drodrigues.tvdome.domain.entity
 
 internal data class ImageEntity(
 

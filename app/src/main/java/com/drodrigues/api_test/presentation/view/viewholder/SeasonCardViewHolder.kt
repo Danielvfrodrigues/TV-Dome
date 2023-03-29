@@ -1,9 +1,9 @@
-package com.drodrigues.api_test.presentation.view.viewholder
+package com.drodrigues.tvdome.presentation.view.viewholder
 
 import androidx.recyclerview.widget.RecyclerView
-import com.drodrigues.api_test.databinding.CardSeasonBinding
-import com.drodrigues.api_test.domain.entity.SeasonEntity
-import com.drodrigues.api_test.presentation.view.listener.SeasonCardClickListener
+import com.drodrigues.tvdome.databinding.CardSeasonBinding
+import com.drodrigues.tvdome.domain.entity.SeasonEntity
+import com.drodrigues.tvdome.presentation.view.listener.SeasonCardClickListener
 
 internal class SeasonCardViewHolder(
     private val cardSeasonBinding: CardSeasonBinding,

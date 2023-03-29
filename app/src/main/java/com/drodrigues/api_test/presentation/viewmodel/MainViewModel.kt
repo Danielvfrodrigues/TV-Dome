@@ -1,14 +1,14 @@
-package com.drodrigues.api_test.presentation.viewmodel
+package com.drodrigues.tvdome.presentation.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.drodrigues.api_test.domain.entity.EpisodeEntity
-import com.drodrigues.api_test.domain.entity.SearchResponseEntity
-import com.drodrigues.api_test.domain.entity.SeasonEntity
-import com.drodrigues.api_test.domain.entity.ShowEntity
-import com.drodrigues.api_test.domain.usecase.*
+import com.drodrigues.tvdome.domain.entity.EpisodeEntity
+import com.drodrigues.tvdome.domain.entity.SearchResponseEntity
+import com.drodrigues.tvdome.domain.entity.SeasonEntity
+import com.drodrigues.tvdome.domain.entity.ShowEntity
+import com.drodrigues.tvdome.domain.usecase.*
 import kotlinx.coroutines.launch
 
 internal class MainViewModel(

@@ -1,9 +1,9 @@
-package com.drodrigues.api_test.data.source
+package com.drodrigues.tvdome.data.source
 
-import com.drodrigues.api_test.data.model.EpisodeModel
-import com.drodrigues.api_test.data.model.SearchResponseModel
-import com.drodrigues.api_test.data.model.SeasonModel
-import com.drodrigues.api_test.data.model.ShowModel
+import com.drodrigues.tvdome.data.model.EpisodeModel
+import com.drodrigues.tvdome.data.model.SearchResponseModel
+import com.drodrigues.tvdome.data.model.SeasonModel
+import com.drodrigues.tvdome.data.model.ShowModel
 import retrofit2.Response
 
 internal interface MainDataSource {

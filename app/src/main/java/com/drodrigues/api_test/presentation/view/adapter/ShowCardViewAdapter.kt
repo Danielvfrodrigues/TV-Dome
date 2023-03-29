@@ -1,12 +1,12 @@
-package com.drodrigues.api_test.presentation.view.adapter
+package com.drodrigues.tvdome.presentation.view.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.drodrigues.api_test.databinding.CardShowBinding
-import com.drodrigues.api_test.domain.entity.ShowEntity
-import com.drodrigues.api_test.presentation.view.listener.ShowCardOnClickListener
-import com.drodrigues.api_test.presentation.view.viewholder.ShowCardViewHolder
+import com.drodrigues.tvdome.databinding.CardShowBinding
+import com.drodrigues.tvdome.domain.entity.ShowEntity
+import com.drodrigues.tvdome.presentation.view.listener.ShowCardOnClickListener
+import com.drodrigues.tvdome.presentation.view.viewholder.ShowCardViewHolder
 
 internal class ShowCardViewAdapter(
 

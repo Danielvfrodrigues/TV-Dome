@@ -1,6 +1,6 @@
-package com.drodrigues.api_test.data.model
+package com.drodrigues.tvdome.data.model
 
-import com.drodrigues.api_test.domain.entity.SeasonEntity
+import com.drodrigues.tvdome.domain.entity.SeasonEntity
 import com.google.gson.annotations.SerializedName
 
 internal data class SeasonModel(

@@ -1,10 +1,10 @@
-package com.drodrigues.api_test.presentation.view.viewholder
+package com.drodrigues.tvdome.presentation.view.viewholder
 
 import android.annotation.SuppressLint
 import androidx.recyclerview.widget.RecyclerView
-import com.drodrigues.api_test.databinding.CardShowBinding
-import com.drodrigues.api_test.domain.entity.EpisodeEntity
-import com.drodrigues.api_test.presentation.view.listener.EpisodeCardClickListener
+import com.drodrigues.tvdome.databinding.CardShowBinding
+import com.drodrigues.tvdome.domain.entity.EpisodeEntity
+import com.drodrigues.tvdome.presentation.view.listener.EpisodeCardClickListener
 import com.squareup.picasso.Picasso
 
 internal class EpisodeCardViewHolder(

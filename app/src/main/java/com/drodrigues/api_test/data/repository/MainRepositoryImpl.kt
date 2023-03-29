@@ -1,13 +1,13 @@
-package com.drodrigues.api_test.data.repository
+package com.drodrigues.tvdome.data.repository
 
-import com.drodrigues.api_test.data.model.toEntity
-import com.drodrigues.api_test.data.model.toEntityList
-import com.drodrigues.api_test.data.source.MainDataSource
-import com.drodrigues.api_test.domain.entity.EpisodeEntity
-import com.drodrigues.api_test.domain.entity.SearchResponseEntity
-import com.drodrigues.api_test.domain.entity.SeasonEntity
-import com.drodrigues.api_test.domain.entity.ShowEntity
-import com.drodrigues.api_test.domain.repository.MainRepository
+import com.drodrigues.tvdome.data.model.toEntity
+import com.drodrigues.tvdome.data.model.toEntityList
+import com.drodrigues.tvdome.data.source.MainDataSource
+import com.drodrigues.tvdome.domain.entity.EpisodeEntity
+import com.drodrigues.tvdome.domain.entity.SearchResponseEntity
+import com.drodrigues.tvdome.domain.entity.SeasonEntity
+import com.drodrigues.tvdome.domain.entity.ShowEntity
+import com.drodrigues.tvdome.domain.repository.MainRepository
 
 internal class MainRepositoryImpl(
     private val mainDataSource: MainDataSource,

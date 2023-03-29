@@ -1,11 +1,11 @@
-package com.drodrigues.api_test.presentation.view.activity
+package com.drodrigues.tvdome.presentation.view.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
-import com.drodrigues.api_test.R
+import com.drodrigues.tvdome.R
 
 class MainActivity : AppCompatActivity() {
 

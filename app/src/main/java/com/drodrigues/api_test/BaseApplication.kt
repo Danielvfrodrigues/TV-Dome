@@ -1,9 +1,9 @@
-package com.drodrigues.api_test
+package com.drodrigues.tvdome
 
 import android.app.Application
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.ProcessLifecycleOwner
-import com.drodrigues.api_test.framework.di.applicationModule
+import com.drodrigues.tvdome.framework.di.applicationModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin

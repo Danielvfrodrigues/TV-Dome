@@ -1,4 +1,4 @@
-package com.drodrigues.api_test.presentation.view.fragment
+package com.drodrigues.tvdome.presentation.view.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,9 +9,9 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.navArgs
-import com.drodrigues.api_test.R
-import com.drodrigues.api_test.databinding.FragmentShowDetailsBinding
-import com.drodrigues.api_test.presentation.viewmodel.MainViewModel
+import com.drodrigues.tvdome.R
+import com.drodrigues.tvdome.databinding.FragmentShowDetailsBinding
+import com.drodrigues.tvdome.presentation.viewmodel.MainViewModel
 import com.squareup.picasso.Picasso
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel

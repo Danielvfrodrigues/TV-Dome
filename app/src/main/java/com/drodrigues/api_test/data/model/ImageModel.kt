@@ -1,4 +1,4 @@
-package com.drodrigues.api_test.data.model
+package com.drodrigues.tvdome.data.model
 
 
 import com.google.gson.annotations.SerializedName

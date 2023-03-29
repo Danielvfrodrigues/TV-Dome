@@ -1,6 +1,8 @@
-package com.drodrigues.api_test.domain.util
+package com.drodrigues.tvdome.domain.util
 
 internal sealed class Result<out A> {
+
+    // TODO Implement Exception Handle
 
     internal data class Success<A>(
         val value: A
@@ -9,4 +11,5 @@ internal sealed class Result<out A> {
     internal data class Failure(
         val throwable: Throwable? = null
     ) : Result<Nothing>()
+
 }

@@ -1,8 +1,8 @@
-package com.drodrigues.api_test.data.model
+package com.drodrigues.tvdome.data.model
 
-import com.drodrigues.api_test.domain.entity.ImageEntity
-import com.drodrigues.api_test.domain.entity.ScheduleEntity
-import com.drodrigues.api_test.domain.entity.ShowEntity
+import com.drodrigues.tvdome.domain.entity.ImageEntity
+import com.drodrigues.tvdome.domain.entity.ScheduleEntity
+import com.drodrigues.tvdome.domain.entity.ShowEntity
 import com.google.gson.annotations.SerializedName
 
 

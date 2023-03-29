@@ -1,6 +1,6 @@
-package com.drodrigues.api_test.framework
+package com.drodrigues.tvdome.framework
 
-import com.drodrigues.api_test.data.util.API_BASE_URL
+import com.drodrigues.tvdome.data.util.API_BASE_URL
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 

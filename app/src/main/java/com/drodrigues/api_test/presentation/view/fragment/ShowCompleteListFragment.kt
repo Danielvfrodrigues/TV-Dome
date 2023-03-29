@@ -1,4 +1,4 @@
-package com.drodrigues.api_test.presentation.view.fragment
+package com.drodrigues.tvdome.presentation.view.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,11 +8,11 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.GridLayoutManager
-import com.drodrigues.api_test.databinding.FragmentShowCompleteListBinding
-import com.drodrigues.api_test.domain.entity.ShowEntity
-import com.drodrigues.api_test.presentation.view.adapter.ShowCardViewAdapter
-import com.drodrigues.api_test.presentation.view.listener.ShowCardOnClickListener
-import com.drodrigues.api_test.presentation.viewmodel.MainViewModel
+import com.drodrigues.tvdome.databinding.FragmentShowCompleteListBinding
+import com.drodrigues.tvdome.domain.entity.ShowEntity
+import com.drodrigues.tvdome.presentation.view.adapter.ShowCardViewAdapter
+import com.drodrigues.tvdome.presentation.view.listener.ShowCardOnClickListener
+import com.drodrigues.tvdome.presentation.viewmodel.MainViewModel
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 

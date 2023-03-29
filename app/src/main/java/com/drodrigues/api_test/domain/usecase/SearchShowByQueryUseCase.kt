@@ -1,7 +1,7 @@
-package com.drodrigues.api_test.domain.usecase
+package com.drodrigues.tvdome.domain.usecase
 
-import com.drodrigues.api_test.domain.entity.SearchResponseEntity
-import com.drodrigues.api_test.domain.repository.MainRepository
+import com.drodrigues.tvdome.domain.entity.SearchResponseEntity
+import com.drodrigues.tvdome.domain.repository.MainRepository
 
 internal interface SearchShowByQueryUseCase {
     suspend fun execute(query: String): List<SearchResponseEntity>
