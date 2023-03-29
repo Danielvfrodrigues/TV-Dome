@@ -1,7 +1,12 @@
+<p align="center">
 <img src="https://github.com/Danielvfrodrigues/TV-Dome/blob/main/app/src/main/res/drawable/TV_DOME-removebg-preview.png" alt="TV Dome Logo">
+</p>
+
+<br>
+<br>
 
 > ### Making idle times productive.
-<br>
+
 <br>
 <br>
 
@@ -58,29 +63,29 @@ SOLID is an acronym for the first five object-oriented design (OOD) principles.
 ## 📎 Project Dependencies
 
 
-#### <ins>Squareup RETROFIT:</ins> <ins>Network Requests;
+#### <ins>RETROFIT:</ins>
 * Https requests made easy;
 
-#### <ins>Google GSON: #####Json Converter;
-* Easy serialize and desserialize Json Objects.
+#### <ins>GSON:</ins>
+* Easy serialize and desserialize Json Objects;
 
-#### <ins>KOIN:</ins> #####Dependency Injection;
-* Implementing dependency injection provides access of anythin anywhere in the code at your desire.
+#### <ins>KOIN:</ins>
+* Implementing dependency injection provides access of anythin anywhere in the code at your desire;
 
-#### <ins>Androidx NAVGRAPH:</ins> #####UI Navigation
+#### <ins>NAVIGATION:</ins>
 * Modern navigation ways for activities and fragments; ~~cuz' everyone is sick of Intents and Bundles!
 
-#### <ins>Square PICASSO:</ins> #####Image Downloader
+#### <ins>PICASSO:</ins>
 * Donwload apply images from the web in your app in just one code line;
 
-#### <ins>Kotlin Coroutines:</ins> #####Kotlin Coroutines</ins>;
-* Asynchronous streams and Threadmanagement.<br>
+#### <ins>COROUTINES:</ins>
+* Asynchronous streams and Threadmanagement.<br>.
 
-<ins>UI Dependencies:
-####Androidx Cardview
-####Androidx Splashscreen
-####Google Material
-####and more...
+#### <ins>UI:</ins>
+Androidx Cardview,
+Androidx Splashscreen,
+Google Material
+and more...
 
 
 ## 🌎 Application Map
@@ -135,7 +140,7 @@ TV Dome is a really intuitive app.
 
 P.S: In the Home, you'll be able to search for your favorite show.
 
-####ENJOY! :D
+#### ENJOY! :D
 
 ## 👨‍🚀 Author
 
