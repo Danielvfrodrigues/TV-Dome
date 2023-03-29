@@ -58,7 +58,7 @@ SOLID is an acronym for the first five object-oriented design (OOD) principles.
 ## 📎 Project Dependencies
 
 
-#### <ins>Squareup RETROFIT:</ins> <ins>Network Requests</ins>;
+#### <ins>Squareup RETROFIT:</ins> <ins>Network Requests;
 * Https requests made easy;
 
 #### <ins>Google GSON: #####Json Converter;
