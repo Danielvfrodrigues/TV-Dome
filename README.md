@@ -3,6 +3,7 @@
 > ### Making idle times productive.
 <br>
 <br>
+<br>
 
 ## 📐 Clean Architecture
 
@@ -20,6 +21,7 @@ Coding the app on Clean provides a plenty of benefits, such as:
 
 ## 💻 Design Pattern
 
+<img src="https://cdn.ttgtmedia.com/rms/onlineimages/whatis-model_view_viewmodel.png" alt="MVVM Design Pattern">
 
 For this application, the Design Pattern of choice was Model–view–viewmodel (MVVM).
 
@@ -53,32 +55,31 @@ SOLID is an acronym for the first five object-oriented design (OOD) principles.
 <br>
 
 
-## 📎 Libraries and Dependencies
+## 📎 Project Dependencies
 
 
-#### Network: <ins>Retrofit</ins>;
-* Used to manage the network connection to the API.
+#### Squareup RETROFIT: <ins>Network Requests</ins>;
+* Https requests made easy;
 
-#### Dependency Injection: <ins>Koin</ins>;
-* "DI is a technique widely used in programming and well suited to Android development. <br>
-Implementing dependency injection provides you with the following advantages:
-1. Reusability of code;
-2. Ease of refactoring;
-3. Ease of testing."
+#### Google GSON
 
+#### KOIN: <ins>Dependency Injection</ins>;
+* Implementing dependency injection provides access of anythin anywhere in the code at your desire.
 
-#### Async and Reactive Programming: <ins>Kotlin Coroutines</ins>.
-* "composing asynchronous streams of real-time data and event-based programs by using observable sequences in a Reactive Programming style. <br>
-Benefits of using RxJava:
-1. Having responsive applications;
-2. Easy Threading and Multi-threading;
-3. Solving the problem of Callback Hell;
-4. Higher flexibility;
-5. Having a mechanism for Error handling;
-6. Life-cycle management;
-7. Providing an standard workflow for coding;
-8. Integration with other libraries."
-<br>
+#### Androidx NAVGRAPH: <ins>UI Navigation</ins>;
+* Modern navigation ways for activities and fragments; ~~cuz' everyone is sick of Intents and Bundles!
+
+#### Square PICASSO: <ins>Image Downloader</ins>;
+* Donwload apply images from the web in your app in just one code line;
+
+#### Kotlin Coroutines: <ins>Kotlin Coroutines</ins>;
+* Asynchronous streams and Threadmanagement.<br>
+
+#### UI Dependencies:
+<ins>Androidx Cardview</ins>
+<ins>Androidx Splashscreen</ins>
+<ins>Google Material</ins>
+<ins>and more...</ins>
 
 
 ## 🌎 Application Map
@@ -93,6 +94,9 @@ Benefits of using RxJava:
 1. Block Screen by PIN Code;
 2. Database Integrations;
 3. Improve User's Experience by adding cool features like Favorite Chart, for instance;
+4. Some minor bug corrections;
+5. Improve performance;
+6. Implement Unit Tests.
 
 <br>
 
@@ -117,32 +121,22 @@ Download the APK file and install it directly in your device.
 <br>
 
 
-## 🚀 How to use Break The Ice
+## 🚀 How to use TV Dome?
 
 
-To use Break The Ice app, follow these steps:
+TV Dome is a really intuitive app.
 
-Break The Ice is a really simple app. 
+1. ***Home Screen***: In the Home Screen, you'll have a load of TV Shows disposed as cards. You just have to ***choose and tap*** over your favorite.
+2. ***Show Details Screen***: After you choose and click, the app will show you, in a new screen, ***all the information*** about your TV Show of choice. Other than that, there is a floating button at the right-bottom side of the screen. By click, it will redirect you to the ***Season list screen***.
+3. ***Season list screen***: Simply a scrollable list of all the seasons available to that show. On click, you'll be sent to the season's ***Episodes Grid Screen***.
+4. ***Episodes Grid Screen***: In front of you will be all the episodes of the chosen season. ***Just click! :)***
+5. ***Episode Details Screen***: Lastlly, a screen with all the information about the tapped episode.
 
-1. ***Main Screen***: In the Main Screen, it gives you many options of activities to do in idle time. Beoynd that, you can always apply filters to ease your choice, by clicking the top-right corner menu icon. You just have to ***choose and click***.
-2. ***Activity Details Screen***: After you choose and click, the app will show you, in a new screen, ***all the needed information*** of your activity of choice. Other than that, the screen will give you the actions of ***Start and Cancel the activity***.
-3. ***Statistics Screen***: This is the last screen of the app. In this one, you can check your activity records and status, such as:
+P.S: In the Home, you'll be able to search for your favorite show.
 
-**- Progress Status**:
-* In Progress;
-* Canceled;
-* Done.
-
-**- Time Spent in the activity**.
-
-**- List of activities chosen**.
-<br>
-<br>
-<br>
-
+####ENJOY! :D
 
 ## 👨‍🚀 Author
-
 
 This project was developd by
 
@@ -164,8 +158,8 @@ This project was developd by
 ## 📚 Bibliographic References<br>
 
 
-***Martin, R. C.(2008)***  <br>
-Clean Code: A Handbook of Agile Software Craftsmanship. <br>
+***Martin, R. C.(2017)***  <br>
+Clean Architecture: A Craftsman's Guide to Software Structure and Design. <br>
 https://www.amazon.com.br/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882
 
 ***Cadu - DevMedia(2010)*** <br>
