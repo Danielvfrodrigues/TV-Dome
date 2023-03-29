@@ -100,7 +100,7 @@ Benefits of using RxJava:
 
 ### Via GitHub:
 ```
-https://github.com/Danielvfrodrigues/appbreaktheice_kotlin
+https://github.com/Danielvfrodrigues/TV-Dome
 ```
 Download the project and run on Android Studio.
 <br>
