@@ -1,34 +1,46 @@
 package com.drodrigues.api_test.data.service
 
 import com.drodrigues.api_test.data.model.EpisodeModel
+import com.drodrigues.api_test.data.model.SearchResponseModel
 import com.drodrigues.api_test.data.model.SeasonModel
 import com.drodrigues.api_test.data.model.ShowModel
+import com.drodrigues.api_test.data.util.*
+import com.drodrigues.api_test.data.util.API_ENDPOINT_GET_SEASONS_BY_SHOW_ID
+import com.drodrigues.api_test.data.util.API_ENDPOINT_GET_SHOW_BY_ID
+import com.drodrigues.api_test.data.util.API_ENDPOINT_GET_SHOW_COMPLETE_LIST
+import com.drodrigues.api_test.data.util.API_ENDPOINT_SEARCH_SHOW
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
+import retrofit2.http.Query
 
 internal interface RetrofitService {
 
-    @GET("shows")
+    @GET(API_ENDPOINT_GET_SHOW_COMPLETE_LIST)
     suspend fun getAllShows(): Response<List<ShowModel>>
 
-    @GET("shows/{id}")
+    @GET(API_ENDPOINT_GET_SHOW_BY_ID)
     suspend fun getShowById(
         @Path("id") id: String
     ): Response<ShowModel>
 
-    @GET("shows/{showId}/seasons")
+    @GET(API_ENDPOINT_GET_SEASONS_BY_SHOW_ID)
     suspend fun getSeasonsByShowId(
         @Path("showId") showId: String
     ): Response<List<SeasonModel>>
 
-    @GET("seasons/{seasonId}/episodes")
+    @GET(API_ENDPOINT_GET_EPISODE_LIST_BY_SEASON_ID)
     suspend fun getEpisodeListBySeasonId(
         @Path("seasonId") seasonId: String
     ): Response<List<EpisodeModel>>
 
-    @GET("episodes/{episodeId}")
+    @GET(API_ENDPOINT_GET_EPISODE_BY_ID)
     suspend fun getEpisodeById(
         @Path("episodeId") episodeId: String
     ): Response<EpisodeModel>
+
+    @GET(API_ENDPOINT_SEARCH_SHOW)
+    suspend fun searchShow(
+        @Query(":query") query: String
+    ): Response<List<SearchResponseModel>>
 }

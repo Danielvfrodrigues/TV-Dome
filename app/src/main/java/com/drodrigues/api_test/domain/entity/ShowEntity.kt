@@ -7,7 +7,7 @@ internal data class ShowEntity(
     val imageEntity: ImageEntity = ImageEntity(),
     val scheduleEntity: ScheduleEntity = ScheduleEntity(),
     val genres: List<String> = listOf(),
-    val summary: String = "",
+    val summary: String? = "",
 
 )
 

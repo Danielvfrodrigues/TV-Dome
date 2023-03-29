@@ -13,7 +13,6 @@ import com.drodrigues.api_test.domain.entity.ShowEntity
 import com.drodrigues.api_test.presentation.view.adapter.ShowCardViewAdapter
 import com.drodrigues.api_test.presentation.view.listener.ShowCardOnClickListener
 import com.drodrigues.api_test.presentation.viewmodel.MainViewModel
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -27,9 +26,9 @@ internal class ShowCompleteListFragment : Fragment(), ShowCardOnClickListener {
         savedInstanceState: Bundle?
     ): View {
 
-        val clickListener = this
         binding = FragmentShowCompleteListBinding.inflate(layoutInflater)
 
+        val clickListener = this
         mainViewModel.getShowCompleteListLiveData.observe(viewLifecycleOwner) { showList ->
             binding.recyclerView.apply {
                 layoutManager = GridLayoutManager(requireContext(), 2)
@@ -37,7 +36,25 @@ internal class ShowCompleteListFragment : Fragment(), ShowCardOnClickListener {
             }
         }
 
-        lifecycleScope.launch(Dispatchers.Main) {
+        mainViewModel.searchShowByQueryLiveData.observe(viewLifecycleOwner) { showList ->
+            binding.recyclerView.apply {
+                layoutManager = GridLayoutManager(requireContext(), 2)
+                val list: ArrayList<ShowEntity> = arrayListOf()
+                for (show in showList) {
+                    list.add(show.showEntity)
+                }
+                adapter = ShowCardViewAdapter(list.toList(), clickListener)
+            }
+        }
+
+        binding.showSearchButton.setOnClickListener {
+            lifecycleScope.launch {
+                val inputText = binding.showSearchTextInput.text.toString()
+                mainViewModel.searchShowByQuery(inputText)
+            }
+        }
+
+        lifecycleScope.launch {
             mainViewModel.getShowCompleteList()
         }
 
@@ -45,8 +62,8 @@ internal class ShowCompleteListFragment : Fragment(), ShowCardOnClickListener {
     }
 
     override fun onClick(showEntity: ShowEntity) {
-        val action =
-            ShowCompleteListFragmentDirections.actionShowCompleteListFragmentToShowDetailsFragment(showEntity.id.toString())
+        val action = ShowCompleteListFragmentDirections
+                .actionShowCompleteListFragmentToShowDetailsFragment(showEntity.id.toString())
         Navigation.findNavController(binding.root).navigate(action)
     }
 

@@ -19,7 +19,7 @@ internal data class ShowModel(
     @SerializedName("genres")
     val genres: List<String> = listOf(),
     @SerializedName("summary")
-    val summary: String = "",
+    val summary: String? = "",
 
     )
 

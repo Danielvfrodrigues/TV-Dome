@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.drodrigues.api_test.domain.entity.EpisodeEntity
+import com.drodrigues.api_test.domain.entity.SearchResponseEntity
 import com.drodrigues.api_test.domain.entity.SeasonEntity
 import com.drodrigues.api_test.domain.entity.ShowEntity
 import com.drodrigues.api_test.domain.usecase.*
@@ -15,7 +16,8 @@ internal class MainViewModel(
     private val getShowByIdUseCase: GetShowByIdUseCase,
     private val getSeasonListByShowIdUseCase: GetSeasonListByShowIdUseCase,
     private val getEpisodeListBySeasonIdUseCase: GetEpisodeListBySeasonIdUseCase,
-    private val getEpisodeByIdUseCase: GetEpisodeByIdUseCase
+    private val getEpisodeByIdUseCase: GetEpisodeByIdUseCase,
+    private val searchShowByQueryUseCase: SearchShowByQueryUseCase
 ) : ViewModel() {
 
     private val _getShowCompleteListLiveData: MutableLiveData<List<ShowEntity>> = MutableLiveData()
@@ -33,6 +35,9 @@ internal class MainViewModel(
     private val _getEpisodeByIdLiveData: MutableLiveData<EpisodeEntity> = MutableLiveData()
     val getEpisodeByIdLiveData: LiveData<EpisodeEntity> = _getEpisodeByIdLiveData
 
+    private val _searchShowByQueryLiveData: MutableLiveData<List<SearchResponseEntity>> = MutableLiveData()
+    val searchShowByQueryLiveData: LiveData<List<SearchResponseEntity>> = _searchShowByQueryLiveData
+
     suspend fun getShowCompleteList() {
         viewModelScope.launch {
             _getShowCompleteListLiveData.value = getShowCompleteListUseCase.execute()
@@ -42,7 +47,6 @@ internal class MainViewModel(
     suspend fun getShowById(id: String) {
         viewModelScope.launch {
             _getShowByIdLiveData.value = getShowByIdUseCase.execute(id)
-
         }
     }
 
@@ -65,7 +69,9 @@ internal class MainViewModel(
     }
 
     suspend fun searchShowByQuery(query: String) {
-        TODO()
+        viewModelScope.launch {
+            _searchShowByQueryLiveData.value = searchShowByQueryUseCase.execute(query)
+        }
     }
 }
 

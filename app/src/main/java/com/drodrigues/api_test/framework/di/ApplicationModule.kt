@@ -63,13 +63,20 @@ internal val applicationModule: Module = module {
         )
     }
 
+    factory<SearchShowByQueryUseCase> {
+        SearchShowByQueryUseCaseImpl(
+            mainRepository = get()
+        )
+    }
+
     viewModel {
         MainViewModel(
             getShowCompleteListUseCase = get(),
             getShowByIdUseCase = get(),
             getSeasonListByShowIdUseCase = get(),
             getEpisodeListBySeasonIdUseCase = get(),
-            getEpisodeByIdUseCase = get()
+            getEpisodeByIdUseCase = get(),
+            searchShowByQueryUseCase = get()
         )
     }
 

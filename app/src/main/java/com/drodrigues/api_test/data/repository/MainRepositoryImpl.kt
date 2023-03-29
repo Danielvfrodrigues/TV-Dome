@@ -4,6 +4,7 @@ import com.drodrigues.api_test.data.model.toEntity
 import com.drodrigues.api_test.data.model.toEntityList
 import com.drodrigues.api_test.data.source.MainDataSource
 import com.drodrigues.api_test.domain.entity.EpisodeEntity
+import com.drodrigues.api_test.domain.entity.SearchResponseEntity
 import com.drodrigues.api_test.domain.entity.SeasonEntity
 import com.drodrigues.api_test.domain.entity.ShowEntity
 import com.drodrigues.api_test.domain.repository.MainRepository
@@ -32,5 +33,8 @@ internal class MainRepositoryImpl(
         return toEntity(mainDataSource.getEpisodeById(episodeId).body()!!)
     }
 
+    override suspend fun searchShowByQuery(query: String): List<SearchResponseEntity> {
+        return toEntityList(mainDataSource.searchShowByQuery(query).body()!!)
+    }
 
 }

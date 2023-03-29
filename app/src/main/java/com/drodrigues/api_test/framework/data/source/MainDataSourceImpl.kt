@@ -1,6 +1,7 @@
 package com.drodrigues.api_test.framework.data.source
 
 import com.drodrigues.api_test.data.model.EpisodeModel
+import com.drodrigues.api_test.data.model.SearchResponseModel
 import com.drodrigues.api_test.data.model.SeasonModel
 import com.drodrigues.api_test.data.model.ShowModel
 import com.drodrigues.api_test.data.service.RetrofitService
@@ -36,5 +37,9 @@ internal class MainDataSourceImpl(
 
     override suspend fun getEpisodeById(episodeId: String): Response<EpisodeModel> {
         return service.getEpisodeById(episodeId)
+    }
+
+    override suspend fun searchShowByQuery(query: String): Response<List<SearchResponseModel>> {
+        return service.searchShow(query)
     }
 }

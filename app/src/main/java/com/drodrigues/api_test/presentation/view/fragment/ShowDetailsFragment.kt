@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.navArgs
+import com.drodrigues.api_test.R
 import com.drodrigues.api_test.databinding.FragmentShowDetailsBinding
 import com.drodrigues.api_test.presentation.viewmodel.MainViewModel
 import com.squareup.picasso.Picasso
@@ -40,7 +41,8 @@ internal class ShowDetailsFragment : Fragment() {
             binding.showScheduleTime.text = show.scheduleEntity.time
             binding.showName.text = show.name
             binding.showGenres.text = show.genres.toString()
-            binding.showSummary.text = HtmlCompat.fromHtml(show.summary, HtmlCompat.FROM_HTML_MODE_LEGACY)
+            binding.showSummary.text = HtmlCompat.fromHtml(show.summary
+                ?: requireContext().getString(R.string.lorem), HtmlCompat.FROM_HTML_MODE_LEGACY)
         }
 
         lifecycleScope.launch {
