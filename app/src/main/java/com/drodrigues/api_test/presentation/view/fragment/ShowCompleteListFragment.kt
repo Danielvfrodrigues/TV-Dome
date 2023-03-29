@@ -10,7 +10,7 @@ import androidx.navigation.Navigation
 import androidx.recyclerview.widget.GridLayoutManager
 import com.drodrigues.api_test.databinding.FragmentShowCompleteListBinding
 import com.drodrigues.api_test.domain.entity.ShowEntity
-import com.drodrigues.api_test.presentation.view.adapter.CardViewAdapter
+import com.drodrigues.api_test.presentation.view.adapter.ShowCardViewAdapter
 import com.drodrigues.api_test.presentation.view.listener.ShowCardClickListener
 import com.drodrigues.api_test.presentation.viewmodel.MainViewModel
 import kotlinx.coroutines.Dispatchers
@@ -33,7 +33,7 @@ internal class ShowCompleteListFragment : Fragment(), ShowCardClickListener {
         mainViewModel.getShowCompleteListLiveData.observe(viewLifecycleOwner) { showList ->
             binding.recyclerView.apply {
                 layoutManager = GridLayoutManager(requireContext(), 3)
-                adapter = CardViewAdapter(showList, firstFragment)
+                adapter = ShowCardViewAdapter(showList, firstFragment)
             }
         }
 
