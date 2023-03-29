@@ -1,6 +1,7 @@
 package com.drodrigues.api_test.presentation.view.fragment
 
 import android.os.Bundle
+import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -22,7 +23,10 @@ class SplashFragment : Fragment() {
     ): View {
 
         binding = FragmentSplashBinding.inflate(layoutInflater)
-        navigate()
+
+        Handler().postDelayed({
+            navigate()
+        }, 5_000)
 
         return binding.root
     }
