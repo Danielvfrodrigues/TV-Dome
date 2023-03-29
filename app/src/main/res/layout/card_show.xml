@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:tools="http://schemas.android.com/tools">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -10,14 +11,14 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/showCardView"
             android:layout_width="match_parent"
-            android:layout_height="230dp"
+            android:layout_height="match_parent"
             android:layout_margin="10dp"
             android:clickable="true"
-            app:cardBackgroundColor="@color/cardview_dark_background"
-            app:cardCornerRadius="15dp"
-            app:cardElevation="15dp">
+            android:background="@drawable/card_view_custom_shape"
+            android:backgroundTint="@color/primary"
+            app:cardCornerRadius="15dp">
 
-            <androidx.appcompat.widget.LinearLayoutCompat
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:paddingBottom="16dp"
@@ -25,11 +26,15 @@
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/card_cover"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/dome"
                     android:adjustViewBounds="true"
-                    android:contentDescription="@string/card_cover"/>
+                    android:contentDescription="@string/card_cover"
+                    android:src="@drawable/dome"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/card_title"/>
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/card_title"
@@ -38,21 +43,27 @@
                     android:gravity="center"
                     android:textColor="@color/white"
                     android:textSize="15sp"
-                    android:lines="2"
                     android:textStyle="bold"
-                    tools:text="Under The Dome"/>
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/card_description"
+                    tools:text="Under The Dome" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/card_description"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
                     android:gravity="center"
+                    android:lines="1"
                     android:textColor="@color/white"
                     android:textSize="12sp"
-                    android:lines="1"
-                    tools:text="Fiction, Action, Sci-fi"/>
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:text="Fiction, Action, Sci-fi" />
 
-            </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>
 

@@ -1,5 +1,6 @@
 package com.drodrigues.api_test.data.service
 
+import com.drodrigues.api_test.data.model.EpisodeModel
 import com.drodrigues.api_test.data.model.SeasonModel
 import com.drodrigues.api_test.data.model.ShowModel
 import retrofit2.Response
@@ -20,4 +21,9 @@ internal interface RetrofitService {
     suspend fun getSeasonsByShowId(
         @Path("showId") showId: String
     ): Response<List<SeasonModel>>
+
+    @GET("seasons/{seasonId}/episodes")
+    suspend fun getEpisodeListBySeasonId(
+        @Path("seasonId") seasonId: String
+    ): Response<List<EpisodeModel>>
 }

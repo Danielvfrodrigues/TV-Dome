@@ -5,13 +5,13 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.drodrigues.api_test.databinding.CardShowBinding
 import com.drodrigues.api_test.domain.entity.ShowEntity
-import com.drodrigues.api_test.presentation.view.listener.ShowCardClickListener
+import com.drodrigues.api_test.presentation.view.listener.ShowCardOnClickListener
 import com.drodrigues.api_test.presentation.view.viewholder.ShowCardViewHolder
 
 internal class ShowCardViewAdapter(
 
     private val shows: List<ShowEntity>,
-    private val clickListener: ShowCardClickListener
+    private val clickListener: ShowCardOnClickListener
 
 ) : RecyclerView.Adapter<ShowCardViewHolder>() {
 

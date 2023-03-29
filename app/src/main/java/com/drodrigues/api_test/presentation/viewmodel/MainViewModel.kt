@@ -4,8 +4,10 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.drodrigues.api_test.domain.entity.EpisodeEntity
 import com.drodrigues.api_test.domain.entity.SeasonEntity
 import com.drodrigues.api_test.domain.entity.ShowEntity
+import com.drodrigues.api_test.domain.usecase.GetEpisodeListBySeasonIdUseCase
 import com.drodrigues.api_test.domain.usecase.GetSeasonListByShowIdUseCase
 import com.drodrigues.api_test.domain.usecase.GetShowByIdUseCase
 import com.drodrigues.api_test.domain.usecase.GetShowCompleteListUseCase
@@ -14,7 +16,8 @@ import kotlinx.coroutines.launch
 internal class MainViewModel(
     private val getShowCompleteListUseCase: GetShowCompleteListUseCase,
     private val getShowByIdUseCase: GetShowByIdUseCase,
-    private val getSeasonListByShowIdUseCase: GetSeasonListByShowIdUseCase
+    private val getSeasonListByShowIdUseCase: GetSeasonListByShowIdUseCase,
+    private val getEpisodeListBySeasonIdUseCase: GetEpisodeListBySeasonIdUseCase
 ) : ViewModel() {
 
     private val _getShowCompleteListLiveData: MutableLiveData<List<ShowEntity>> = MutableLiveData()
@@ -25,6 +28,9 @@ internal class MainViewModel(
 
     private val _getSeasonListByShowIdLiveData: MutableLiveData<List<SeasonEntity>> = MutableLiveData()
     val getSeasonListByShowIdLivedata: LiveData<List<SeasonEntity>> = _getSeasonListByShowIdLiveData
+
+    private val _getEpisodeListBySeasonIdLiveData: MutableLiveData<List<EpisodeEntity>> = MutableLiveData()
+    val getEpisodeListBySeasonIdLiveData: LiveData<List<EpisodeEntity>> = _getEpisodeListBySeasonIdLiveData
 
     suspend fun getShowCompleteList() {
         viewModelScope.launch {
@@ -45,8 +51,10 @@ internal class MainViewModel(
         }
     }
 
-    suspend fun getEpisodeListBySeasonId() {
-        TODO()
+    suspend fun getEpisodeListBySeasonId(seasonId: String) {
+        viewModelScope.launch {
+            _getEpisodeListBySeasonIdLiveData.value = getEpisodeListBySeasonIdUseCase.execute(seasonId)
+        }
     }
 
     suspend fun searchShowByQuery() {

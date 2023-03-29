@@ -1,15 +1,15 @@
 package com.drodrigues.api_test.framework.di
 
-import com.drodrigues.api_test.data.repository.ShowRepositoryImpl
-import com.drodrigues.api_test.data.source.ShowDataSource
-import com.drodrigues.api_test.domain.repository.ShowRepository
+import com.drodrigues.api_test.data.repository.MainRepositoryImpl
+import com.drodrigues.api_test.data.source.MainDataSource
+import com.drodrigues.api_test.domain.repository.MainRepository
 import com.drodrigues.api_test.domain.usecase.*
 import com.drodrigues.api_test.domain.usecase.GetShowByIdUseCase
 import com.drodrigues.api_test.domain.usecase.GetShowByIdUseCaseImpl
 import com.drodrigues.api_test.domain.usecase.GetShowCompleteListUseCase
 import com.drodrigues.api_test.domain.usecase.GetShowCompleteListUseCaseImpl
 import com.drodrigues.api_test.framework.AppConnector
-import com.drodrigues.api_test.framework.data.source.ShowDataSourceImpl
+import com.drodrigues.api_test.framework.data.source.MainDataSourceImpl
 import com.drodrigues.api_test.presentation.viewmodel.MainViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.module.Module
@@ -21,33 +21,39 @@ internal val applicationModule: Module = module {
         AppConnector().getRetrofit()
     }
 
-    factory<ShowDataSource> {
-        ShowDataSourceImpl(
+    factory<MainDataSource> {
+        MainDataSourceImpl(
             retrofit = get(),
         )
     }
 
-    factory<ShowRepository> {
-        ShowRepositoryImpl(
-            showDataSource = get(),
+    factory<MainRepository> {
+        MainRepositoryImpl(
+            mainDataSource = get(),
         )
     }
 
     factory<GetShowCompleteListUseCase> {
         GetShowCompleteListUseCaseImpl(
-            showRepository = get(),
+            mainRepository = get(),
         )
     }
 
     factory<GetShowByIdUseCase> {
         GetShowByIdUseCaseImpl(
-            showRepository = get()
+            mainRepository = get()
         )
     }
 
     factory<GetSeasonListByShowIdUseCase> {
         GetSeasonListByShowIdUseCaseImpl(
-            showRepository = get()
+            mainRepository = get()
+        )
+    }
+
+    factory<GetEpisodeListBySeasonIdUseCase> {
+        GetEpisodeListBySeasonIdUseCaseImpl(
+            mainRepository = get()
         )
     }
 
@@ -55,7 +61,8 @@ internal val applicationModule: Module = module {
         MainViewModel(
             getShowCompleteListUseCase = get(),
             getShowByIdUseCase = get(),
-            getSeasonListByShowIdUseCase = get()
+            getSeasonListByShowIdUseCase = get(),
+            getEpisodeListBySeasonIdUseCase = get()
         )
     }
 

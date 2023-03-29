@@ -11,13 +11,13 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.drodrigues.api_test.databinding.FragmentShowCompleteListBinding
 import com.drodrigues.api_test.domain.entity.ShowEntity
 import com.drodrigues.api_test.presentation.view.adapter.ShowCardViewAdapter
-import com.drodrigues.api_test.presentation.view.listener.ShowCardClickListener
+import com.drodrigues.api_test.presentation.view.listener.ShowCardOnClickListener
 import com.drodrigues.api_test.presentation.viewmodel.MainViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-internal class ShowCompleteListFragment : Fragment(), ShowCardClickListener {
+internal class ShowCompleteListFragment : Fragment(), ShowCardOnClickListener {
 
     private lateinit var binding: FragmentShowCompleteListBinding
     private val mainViewModel: MainViewModel by viewModel()
@@ -27,13 +27,13 @@ internal class ShowCompleteListFragment : Fragment(), ShowCardClickListener {
         savedInstanceState: Bundle?
     ): View {
 
-        val firstFragment = this
+        val clickListener = this
         binding = FragmentShowCompleteListBinding.inflate(layoutInflater)
 
         mainViewModel.getShowCompleteListLiveData.observe(viewLifecycleOwner) { showList ->
             binding.recyclerView.apply {
-                layoutManager = GridLayoutManager(requireContext(), 3)
-                adapter = ShowCardViewAdapter(showList, firstFragment)
+                layoutManager = GridLayoutManager(requireContext(), 2)
+                adapter = ShowCardViewAdapter(showList, clickListener)
             }
         }
 

@@ -1,17 +1,18 @@
 package com.drodrigues.api_test.framework.data.source
 
+import com.drodrigues.api_test.data.model.EpisodeModel
 import com.drodrigues.api_test.data.model.SeasonModel
 import com.drodrigues.api_test.data.model.ShowModel
 import com.drodrigues.api_test.data.service.RetrofitService
-import com.drodrigues.api_test.data.source.ShowDataSource
+import com.drodrigues.api_test.data.source.MainDataSource
 import retrofit2.Response
 import retrofit2.Retrofit
 
-internal class ShowDataSourceImpl(
+internal class MainDataSourceImpl(
 
     retrofit: Retrofit
 
-) : ShowDataSource {
+) : MainDataSource {
 
     private val service: RetrofitService by lazy {
         retrofit.create(RetrofitService::class.java)
@@ -27,5 +28,9 @@ internal class ShowDataSourceImpl(
 
     override suspend fun getSeasonListByShowId(showId: String): Response<List<SeasonModel>> {
         return service.getSeasonsByShowId(showId)
+    }
+
+    override suspend fun getEpisodeListBySeasonId(seasonId: String): Response<List<EpisodeModel>> {
+        return service.getEpisodeListBySeasonId(seasonId)
     }
 }

@@ -21,7 +21,7 @@ internal fun toEntity(model: SeasonModel): SeasonEntity {
     )
 }
 
-internal fun toSeasonEntityList(initial: List<SeasonModel>): List<SeasonEntity> {
+internal fun toEntityList(initial: List<SeasonModel>): List<SeasonEntity> {
     return initial.map { toEntity(it) }
 }
 
