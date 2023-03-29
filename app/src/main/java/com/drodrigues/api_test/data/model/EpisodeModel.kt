@@ -14,6 +14,8 @@ internal data class EpisodeModel(
     val number: String,
     @SerializedName("season")
     val season: String,
+    @SerializedName("runtime")
+    val runtime: String,
     @SerializedName("summary")
     val summary: String,
     @SerializedName("image")
@@ -27,6 +29,7 @@ internal fun toEntity(model: EpisodeModel): EpisodeEntity {
         name = model.name,
         number= model.number,
         season = model.season,
+        runtime = model.runtime,
         imageEntity = ImageEntity(
             medium = model.imageModel.medium,
             original = model.imageModel.original

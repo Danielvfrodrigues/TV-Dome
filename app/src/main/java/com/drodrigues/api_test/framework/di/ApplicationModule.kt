@@ -57,12 +57,19 @@ internal val applicationModule: Module = module {
         )
     }
 
+    factory<GetEpisodeByIdUseCase> {
+        GetEpisodeByIdUseCaseImpl(
+            mainRepository = get()
+        )
+    }
+
     viewModel {
         MainViewModel(
             getShowCompleteListUseCase = get(),
             getShowByIdUseCase = get(),
             getSeasonListByShowIdUseCase = get(),
-            getEpisodeListBySeasonIdUseCase = get()
+            getEpisodeListBySeasonIdUseCase = get(),
+            getEpisodeByIdUseCase = get()
         )
     }
 

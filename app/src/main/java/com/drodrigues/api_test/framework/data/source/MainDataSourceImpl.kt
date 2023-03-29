@@ -33,4 +33,8 @@ internal class MainDataSourceImpl(
     override suspend fun getEpisodeListBySeasonId(seasonId: String): Response<List<EpisodeModel>> {
         return service.getEpisodeListBySeasonId(seasonId)
     }
+
+    override suspend fun getEpisodeById(episodeId: String): Response<EpisodeModel> {
+        return service.getEpisodeById(episodeId)
+    }
 }

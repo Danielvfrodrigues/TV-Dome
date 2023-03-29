@@ -59,10 +59,24 @@
         android:label="fragment_episodes"
         tools:layout="@layout/fragment_episodes" >
         <action
+            android:id="@+id/action_episodesFragment_to_episodeDetailsFragment"
+            app:destination="@id/episodeDetailsFragment" />
+        <action
             android:id="@+id/action_episodesFragment_to_seasonsFragment"
             app:destination="@id/seasonsFragment" />
         <argument
             android:name="seasonId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/episodeDetailsFragment"
+        android:name="com.drodrigues.api_test.presentation.view.fragment.EpisodeDetailsFragment"
+        android:label="EpisodeDetailsFragment" >
+        <action
+            android:id="@+id/action_episodeDetailsFragment_to_episodesFragment"
+            app:destination="@id/episodesFragment" />
+        <argument
+            android:name="episodeId"
             app:argType="string" />
     </fragment>
 </navigation>

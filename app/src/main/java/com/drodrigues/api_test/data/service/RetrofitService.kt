@@ -26,4 +26,9 @@ internal interface RetrofitService {
     suspend fun getEpisodeListBySeasonId(
         @Path("seasonId") seasonId: String
     ): Response<List<EpisodeModel>>
+
+    @GET("episodes/{episodeId}")
+    suspend fun getEpisodeById(
+        @Path("episodeId") episodeId: String
+    ): Response<EpisodeModel>
 }

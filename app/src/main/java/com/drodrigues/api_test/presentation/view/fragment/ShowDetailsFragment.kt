@@ -45,7 +45,6 @@ internal class ShowDetailsFragment : Fragment() {
 
         lifecycleScope.launch {
             mainViewModel.getShowById(args.showId)
-            mainViewModel.getSeasonListByShowId(args.showId)
         }
 
         return binding.root

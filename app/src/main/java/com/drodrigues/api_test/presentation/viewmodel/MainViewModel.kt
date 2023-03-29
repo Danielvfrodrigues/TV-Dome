@@ -7,17 +7,15 @@ import androidx.lifecycle.viewModelScope
 import com.drodrigues.api_test.domain.entity.EpisodeEntity
 import com.drodrigues.api_test.domain.entity.SeasonEntity
 import com.drodrigues.api_test.domain.entity.ShowEntity
-import com.drodrigues.api_test.domain.usecase.GetEpisodeListBySeasonIdUseCase
-import com.drodrigues.api_test.domain.usecase.GetSeasonListByShowIdUseCase
-import com.drodrigues.api_test.domain.usecase.GetShowByIdUseCase
-import com.drodrigues.api_test.domain.usecase.GetShowCompleteListUseCase
+import com.drodrigues.api_test.domain.usecase.*
 import kotlinx.coroutines.launch
 
 internal class MainViewModel(
     private val getShowCompleteListUseCase: GetShowCompleteListUseCase,
     private val getShowByIdUseCase: GetShowByIdUseCase,
     private val getSeasonListByShowIdUseCase: GetSeasonListByShowIdUseCase,
-    private val getEpisodeListBySeasonIdUseCase: GetEpisodeListBySeasonIdUseCase
+    private val getEpisodeListBySeasonIdUseCase: GetEpisodeListBySeasonIdUseCase,
+    private val getEpisodeByIdUseCase: GetEpisodeByIdUseCase
 ) : ViewModel() {
 
     private val _getShowCompleteListLiveData: MutableLiveData<List<ShowEntity>> = MutableLiveData()
@@ -31,6 +29,9 @@ internal class MainViewModel(
 
     private val _getEpisodeListBySeasonIdLiveData: MutableLiveData<List<EpisodeEntity>> = MutableLiveData()
     val getEpisodeListBySeasonIdLiveData: LiveData<List<EpisodeEntity>> = _getEpisodeListBySeasonIdLiveData
+
+    private val _getEpisodeByIdLiveData: MutableLiveData<EpisodeEntity> = MutableLiveData()
+    val getEpisodeByIdLiveData: LiveData<EpisodeEntity> = _getEpisodeByIdLiveData
 
     suspend fun getShowCompleteList() {
         viewModelScope.launch {
@@ -57,7 +58,13 @@ internal class MainViewModel(
         }
     }
 
-    suspend fun searchShowByQuery() {
+    suspend fun getEpisodeById(episodeId: String) {
+        viewModelScope.launch {
+            _getEpisodeByIdLiveData.value = getEpisodeByIdUseCase.execute(episodeId)
+        }
+    }
+
+    suspend fun searchShowByQuery(query: String) {
         TODO()
     }
 }

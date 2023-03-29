@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:background="@color/cardview_light_background"
+        tools:context=".presentation.view.fragment.episodeDetailsFragment">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:cardCornerRadius="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/episode_cover"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/primary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/episode_season_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:textColor="@color/gray"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/episode_name"
+            app:layout_constraintEnd_toEndOf="@+id/nestedScrollView"
+            app:layout_constraintTop_toTopOf="@+id/episode_name"
+            tools:text="Season 12" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/episode_runtime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:textColor="@color/gray"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/episode_number"
+            app:layout_constraintEnd_toEndOf="@+id/episode_season_number"
+            app:layout_constraintTop_toBottomOf="@+id/episode_season_number"
+            tools:text="7pm" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/episode_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="start|center"
+            android:textColor="@color/primary"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/episode_season_number"
+            app:layout_constraintStart_toStartOf="@+id/nestedScrollView"
+            app:layout_constraintTop_toBottomOf="@+id/cardView"
+            tools:text="Under The Dome" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/episode_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:lines="1"
+            android:textColor="@color/primary"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="@+id/episode_name"
+            app:layout_constraintStart_toStartOf="@+id/nestedScrollView"
+            app:layout_constraintTop_toBottomOf="@+id/episode_name"
+            tools:text="Episode 1" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/episode_number">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/episode_summary"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:justificationMode="inter_word"
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="18sp"
+                tools:text="@string/lorem" />
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

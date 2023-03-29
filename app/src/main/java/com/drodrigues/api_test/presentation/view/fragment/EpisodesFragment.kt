@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.GridLayoutManager
 import com.drodrigues.api_test.databinding.FragmentEpisodesBinding
@@ -47,8 +48,8 @@ internal class EpisodesFragment : Fragment(), EpisodeCardClickListener {
     }
 
     override fun onClick(episodeEntity: EpisodeEntity) {
-//        val action =
-//            ShowCompleteListFragmentDirections.actionShowCompleteListFragmentToShowDetailsFragment(episodeEntity.id)
-//        Navigation.findNavController(binding.root).navigate(action)
+        val action =
+            EpisodesFragmentDirections.actionEpisodesFragmentToEpisodeDetailsFragment(episodeEntity.id)
+        Navigation.findNavController(binding.root).navigate(action)
     }
 }

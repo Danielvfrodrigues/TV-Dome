@@ -27,4 +27,10 @@ internal class MainRepositoryImpl(
     override suspend fun getEpisodeListBySeasonId(seasonId: String): List<EpisodeEntity> {
         return toEntityList(mainDataSource.getEpisodeListBySeasonId(seasonId).body()!!)
     }
+
+    override suspend fun getEpisodeById(episodeId: String): EpisodeEntity {
+        return toEntity(mainDataSource.getEpisodeById(episodeId).body()!!)
+    }
+
+
 }

@@ -10,4 +10,5 @@ internal interface MainRepository {
     suspend fun getShowById(id: String): ShowEntity
     suspend fun getSeasonListByShowId(showId: String): List<SeasonEntity>
     suspend fun getEpisodeListBySeasonId(seasonId: String): List<EpisodeEntity>
+    suspend fun getEpisodeById(episodeId: String): EpisodeEntity
 }
