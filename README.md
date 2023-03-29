@@ -90,7 +90,7 @@ and more...
 
 ## 🌎 Application Map
 
-<img src="https://github.com/Danielvfrodrigues/TV-Dome/blob/main/tv-dome-wireframe.png" alt="TV Dome Wireframe"> 
+<img src="https://github.com/Danielvfrodrigues/TV-Dome/blob/main/tv-dome-wireframe-gh-bg.png" alt="TV Dome Wireframe"> 
 <br>
 
 
