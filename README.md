@@ -25,8 +25,9 @@ Coding the app on Clean provides a plenty of benefits, such as:
 
 
 ## 💻 Design Pattern
-
+<p align="center">
 <img src="https://cdn.ttgtmedia.com/rms/onlineimages/whatis-model_view_viewmodel.png" alt="MVVM Design Pattern">
+</p>
 
 For this application, the Design Pattern of choice was Model–view–viewmodel (MVVM).
 
