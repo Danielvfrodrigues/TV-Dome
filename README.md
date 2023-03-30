@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://github.com/Danielvfrodrigues/TV-Dome/blob/main/new-dome.png" alt="TV Dome Logo" width="440" height="360">
+<img src="https://github.com/Danielvfrodrigues/TV-Dome/blob/main/new-dome.png" alt="TV Dome Logo" width="430" height="360">
 </p>
 
 <br>
@@ -11,8 +11,9 @@
 <br>
 
 ## 📐 Clean Architecture
-
-<img src="https://github.com/Danielvfrodrigues/TV-Dome/blob/main/new-clean-arch.png">
+<p align="center">
+<img src="https://github.com/Danielvfrodrigues/TV-Dome/blob/main/new-clean-arch.png" width="960" height="480">
+</p>
 
 This project was developed base on the Clean Architecture.
 Coding the app on Clean provides a plenty of benefits, such as: 
@@ -26,7 +27,7 @@ Coding the app on Clean provides a plenty of benefits, such as:
 
 ## 💻 Design Pattern
 <p align="center">
-<img src="https://cdn.ttgtmedia.com/rms/onlineimages/whatis-model_view_viewmodel.png" alt="MVVM Design Pattern">
+<img src="https://cdn.ttgtmedia.com/rms/onlineimages/whatis-model_view_viewmodel.png" alt="MVVM Design Pattern" width="960" height="480">
 </p>
 
 For this application, the Design Pattern of choice was Model–view–viewmodel (MVVM).
@@ -35,12 +36,16 @@ The MVVM allows to easily organize the coding files by separating the Graphical 
 
 ### Responsibilities and Characteristics
 
-* ***Model:*** The Model encapsulates the business logic and the data structure of the app.
+* ***Model:*** Represent the data structure of the app.
 
-* ***View:*** The responsibility of the view is to define a appearence or structure presented on screen to the user.
+* ***View:*** Build and update the user interface (UI).
 
-* ***ViewModel:*** The ViewModel responsibility in MVVM's context is to provide a presentation logic to the View by implementing properties and commands so that the View may be able to fill it's controls and notify them.
+* ***ViewModel:*** Provide distinct life cycle, properties and logic to the View.
 <br>
+
+<p align="center">
+<img src="https://github.com/Danielvfrodrigues/TV-Dome/blob/main/vm-lc.png" alt="Viewmodel lifecycle" width="960" height="480">
+</p>
 
 
 ## 🧱 SOLID Principles
