@@ -26,7 +26,7 @@ Coding the app on Clean provides a plenty of benefits, such as:
 
 ## 💻 Design Pattern
 
-<img src="https://cdn.ttgtmedia.com/rms/onlineimages/whatis-model_view_viewmodel.png" alt="MVVM Design Pattern">
+<img src="https://github.com/Danielvfrodrigues/TV-Dome/blob/main/mvvm-chart-img.png" alt="MVVM Design Pattern">
 
 For this application, the Design Pattern of choice was Model–view–viewmodel (MVVM).
 
@@ -82,10 +82,10 @@ SOLID is an acronym for the first five object-oriented design (OOD) principles.
 * Asynchronous streams and Threadmanagement.<br>.
 
 #### <ins>UI:</ins>
-Androidx Cardview,
-Androidx Splashscreen,
-Google Material
-and more...
+* Androidx Cardview,
+* Androidx Splashscreen,
+* Google Material
+* and more...
 
 
 ## 🌎 Application Map
@@ -115,7 +115,7 @@ https://github.com/Danielvfrodrigues/TV-Dome
 ```
 Download the project and run on Android Studio.
 <br>
-Get onboard of the development history. Check out the commits:
+Get onboard of the development history. Check out the commits:<br>
 https://github.com/Danielvfrodrigues/TV-Dome/search?o=asc&q=commits&s=committer-date&type=commits
 <br>
 <br>
