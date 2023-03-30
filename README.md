@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://github.com/Danielvfrodrigues/TV-Dome/blob/main/new-dome.png" alt="TV Dome Logo" width="960" height="720">
+<img src="https://github.com/Danielvfrodrigues/TV-Dome/blob/main/new-dome.png" alt="TV Dome Logo" width="480" height="360">
 </p>
 
 <br>
