@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://github.com/Danielvfrodrigues/TV-Dome/blob/main/app/src/main/res/drawable/TV_DOME-removebg-preview.png" alt="TV Dome Logo">
+<img src="https://github.com/Danielvfrodrigues/TV-Dome/blob/main/dome-no-bg.png" alt="TV Dome Logo">
 </p>
 
 <br>
@@ -12,7 +12,7 @@
 
 ## 📐 Clean Architecture
 
-<img src="https://www.objective.com.br/wp-content/uploads/2020/01/Camada-de-Dados-Data-Layer.png">
+<img src="https://github.com/Danielvfrodrigues/TV-Dome/blob/main/clean-arch.png">
 
 This project was developed base on the Clean Architecture.
 Coding the app on Clean provides a plenty of benefits, such as: 
@@ -26,7 +26,7 @@ Coding the app on Clean provides a plenty of benefits, such as:
 
 ## 💻 Design Pattern
 
-<img src="https://cdn.ttgtmedia.com/rms/onlineimages/whatis-model_view_viewmodel.png" alt="MVVM Design Pattern">
+<img src="https://github.com/Danielvfrodrigues/TV-Dome/blob/main/mvvm-chart-img.png" alt="MVVM Design Pattern">
 
 For this application, the Design Pattern of choice was Model–view–viewmodel (MVVM).
 
