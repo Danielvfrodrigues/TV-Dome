@@ -115,6 +115,9 @@ https://github.com/Danielvfrodrigues/TV-Dome
 ```
 Download the project and run on Android Studio.
 <br>
+Get onboard of the development history. Check out the commits:
+https://github.com/Danielvfrodrigues/TV-Dome/search?o=asc&q=commits&s=committer-date&type=commits
+<br>
 <br>
 
 ### Via APK File:
