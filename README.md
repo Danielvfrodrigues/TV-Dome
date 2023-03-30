@@ -12,7 +12,7 @@
 
 ## 📐 Clean Architecture
 
-<img src="https://github.com/Danielvfrodrigues/TV-Dome/blob/main/clean-arch.png">
+<img src="https://github.com/Danielvfrodrigues/TV-Dome/blob/main/new-clean-arch.png">
 
 This project was developed base on the Clean Architecture.
 Coding the app on Clean provides a plenty of benefits, such as: 
