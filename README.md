@@ -26,7 +26,7 @@ Coding the app on Clean provides a plenty of benefits, such as:
 
 ## 💻 Design Pattern
 
-<img src="https://github.com/Danielvfrodrigues/TV-Dome/blob/main/mvvm-chart-img.png" alt="MVVM Design Pattern">
+<img src="https://cdn.ttgtmedia.com/rms/onlineimages/whatis-model_view_viewmodel.png" alt="MVVM Design Pattern">
 
 For this application, the Design Pattern of choice was Model–view–viewmodel (MVVM).
 
