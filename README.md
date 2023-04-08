@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://github.com/Danielvfrodrigues/TV-Dome/blob/main/new-dome.png" alt="TV Dome Logo" width="430" height="360">
+<img src="https://github.com/Danielvfrodrigues/TV-Dome/blob/main/app/assets/tv-dome-logo-no-bg.png" alt="TV Dome Logo" width="400" height="360">
 </p>
 
 <br>
@@ -12,7 +12,7 @@
 
 ## 📐 Clean Architecture
 <p align="center">
-<img src="https://github.com/Danielvfrodrigues/TV-Dome/blob/main/new-clean-arch.png" width="960" height="480">
+<img src="https://github.com/Danielvfrodrigues/TV-Dome/blob/main/app/assets/clean-arch-altbg-chart.png" width="960" height="480">
 </p>
 
 This project was developed base on the Clean Architecture.
@@ -44,7 +44,7 @@ The MVVM allows to easily organize the coding files by separating the Graphical 
 <br>
 
 <p align="center">
-<img src="https://github.com/Danielvfrodrigues/TV-Dome/blob/main/vm-lc.png" alt="Viewmodel lifecycle" width="960" height="480">
+<img src="https://github.com/Danielvfrodrigues/TV-Dome/blob/main/app/assets/viewmodel-lifecycle-chart.png" alt="Viewmodel lifecycle" width="960" height="480">
 </p>
 
 
@@ -96,7 +96,7 @@ SOLID is an acronym for the first five object-oriented design (OOD) principles.
 
 ## 🌎 Application Map
 
-<img src="https://github.com/Danielvfrodrigues/TV-Dome/blob/main/tv-dome-wireframe-gh-bg.png" alt="TV Dome Wireframe"> 
+<img src="https://github.com/Danielvfrodrigues/TV-Dome/blob/main/app/assets/tv-dome-wireframe-gh-bg.png" alt="TV Dome Wireframe"> 
 <br>
 
 
