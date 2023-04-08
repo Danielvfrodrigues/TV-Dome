@@ -19,7 +19,7 @@
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/tv_dome_logo" />
+                android:src="@drawable/tv_dome_logo_no_bg" />
 
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
